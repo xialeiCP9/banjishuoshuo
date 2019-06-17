@@ -1,0 +1,40 @@
+<div>
+	<div class="wrap-content">
+		<div class="login-wrap-box">
+			<h2 class="title">登录</h2>
+			<div class="content-box">
+				<form class="form-box" action="" method="post" name="loginform">
+					<label class="username-label">
+						<span class="label">
+							<span class="tip">*</span>
+							电子邮箱
+						</span>
+						<i class="dl-icon dl-icon-email"></i>
+						<input type="text" placeholder="请输入邮箱" class="username" name="email" ng-model="loginCtrl.formdata.email" id="email" required>
+					</label>
+					<label class="password-label">
+						<span class="label">
+							<span class="tip">*</span>
+							密码
+						</span>
+						<i class="dl-icon dl-icon-email"></i>
+						<input type="password" placeholder="请输入密码" class="password" ng-model="loginCtrl.formdata.password" id="password" required>
+					</label>
+					
+					<div class="btn-box">
+						<button type="button" class="request-btn" ng-disabled="loginform.$invalid" ng-click="loginCtrl.doLogin()">登录</button>
+					</div>
+					<div class="info clearfix">
+						<p class="info-item fl">
+							没有账号?
+							<span ui-sref="root.regist" class="btn">注册</span>
+						</p>
+						<p class="btn fr">
+							忘记密码?
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

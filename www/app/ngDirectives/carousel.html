@@ -1,0 +1,15 @@
+<div class="content">
+	<ul>
+		<li class="banner-item" ng-show="idx == $index" ng-repeat="item in lists">
+			<a href="# {{ $index }}"><img ng-src="{{ item }}" width="480" height="300" alt=""></a>
+		</li>
+	</ul>
+</div>
+<div class="switch-btn-box">
+	<div class="hover-bg" ng-style="hoverStyle()"></div>
+	<ul>
+		<li ng-repeat="item in lists">
+			<a href="#"><img src="{{ item }}" width="100" height="50" alt=""></a>
+		</li>
+	</ul>
+</div>

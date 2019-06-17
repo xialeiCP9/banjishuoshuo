@@ -1,0 +1,121 @@
+<div>
+	<div class="wrap-content">
+		<div class="personnal-wrap">
+			<h2 class="title-h2">个人资料</h2>
+			<div class="personnal-content">
+				<ul class="personnal-tabs clearfix">
+					<li class="personnal-item fl choose" ng-class="profileCtrl.tabType == 0 ? 'choose' : ''" ng-click="profileCtrl.changeTab(0)">修改资料</li>
+					<li class="personnal-item fl" ng-class="profileCtrl.tabType == 1 ? 'choose' : ''" ng-click="profileCtrl.changeTab(1)">修改密码</li>
+				</ul>
+				<div class="personnal-detail clearfix" ng-if="profileCtrl.tabType == 0">
+					<form action="" method="post" class="form-box">
+						<div class="avatar fl">
+							<img class="avatar-img clearfix" src="{{ profileCtrl.getAvatar() }}" />
+							<p class="modify" ng-click="profileCtrl.setModal(true)">修改头像</p>
+						</div>
+
+						<div class="personnal-detail-right fl">
+							<div class="right-info">
+								<div class="id-card">
+									<span class="id-name">ID: {{ profileCtrl.formdata.email }}</span>
+								</div>
+								<div class="id-info">
+									<label class="nickname-label">
+										<span class="label">
+											昵称
+										</span>
+										<i class="dl-icon dl-icon-email"></i>
+										<input type="text" placeholder="请输入昵称" class="nickname" name="nickname" ng-model="profileCtrl.formdata.nickname" id="nickname">
+									</label>
+									<label class="briefintro-label">
+										<span class="label">
+											简介
+										</span>
+										<i class="dl-icon dl-icon-email"></i>
+										<textarea  placeholder="300字以内" class="briefintro" name="briefintro" ng-model="profileCtrl.formdata.briefintro" id="briefintro"></textarea>
+										<span class="count-tip">{{ 300 - profileCtrl.formdata.briefintro.length }}</span> 
+									</label>
+									<div class="btn-box">
+										<button type="button" class="request-btn" ng-disabled="loginform.$invalid" ng-click="profileCtrl.doProfile()">确认</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="personnal-detail clearfix" ng-if="profileCtrl.tabType == 1">
+					<div class="password-box">
+						<form action="" method="post" class="form-box">
+							<div class="personnal-detail-right">
+								<div class="right-info">
+									<div class="id-card">
+										<span class="id-name">ID: {{ profileCtrl.formdata.email }}</span>
+									</div>
+									<div class="id-info">
+										<label class="password-label">
+											<span class="label">
+												原密码
+											</span>
+											<i class="dl-icon dl-icon-email"></i>
+											<input type="password" placeholder="请输入原密码" class="password" name="password" ng-model="profileCtrl.formdata.password" id="password" required>
+										</label>
+										<label class="password-label">
+											<span class="label">
+												新密码
+											</span>
+											<i class="dl-icon dl-icon-email"></i>
+											<input type="password" placeholder="请输入新密码" class="password" name="password" ng-model="profileCtrl.formdata.password" id="password" required>
+										</label>
+										<label class="password-label">
+											<span class="label">
+												确认密码
+											</span>
+											<i class="dl-icon dl-icon-email"></i>
+											<input type="password" placeholder="请输入密码" class="password" name="repassword" ng-model="profileCtrl.formdata.repassword" id="repassword" required>
+										</label>
+										<div class="btn-box">
+											<button type="button" class="request-btn" ng-disabled="loginform.$invalid" ng-click="profileCtrl.doLogin()">确认</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- 弹出框 -->
+				<div class="modal" ng-if="profileCtrl.isModal">
+					<div class="modal-content">
+						<form action="" method="post">
+							<div class="modal-header">
+								<div class="modal-close" ng-click="profileCtrl.setModal(false)">
+									<i class="close-icon">x</i>
+								</div>
+								<h3 class="modal-title">上传头像</h3>
+							</div>
+							<div class="modal-body">
+								<div class="operate-area" ng-if="profileCtrl.uploadImageUrl === ''">
+									<img src="/images/download.png" alt="" class="download-img"/>
+									<span class="download-tip">点击上传图片</span>
+									<input type="file" name="file" required nv-file-select uploader="profileCtrl.uploader" />
+								</div>
+								<div class="cut-area" ng-if="profileCtrl.uploadImageUrl !== ''">
+									<cut-pic img="{{ profileCtrl.uploadImageUrl }}" v="profileCtrl.v" maxwidth="600" maxheight="400" />
+								</div>
+								
+								
+							</div>
+							<div class="modal-footer">
+								<p class="img-tip" ng-class="profileCtrl.status == 1 ? 'success-upload' : 'fail-upload'">{{ profileCtrl.msg === "" ? "图片不能小于100 * 100" : profileCtrl.msg }}</p>
+								<div class="btn-box">
+									<button type="button" class="cancel-btn fr" ng-click="profileCtrl.setModal(false)">取消</button>
+									<button type="button" class="request-btn fr" ng-click="profileCtrl.doCut()" ng-disabled="profileCtrl.uploadImageUrl === ''">确认</button>
+									
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

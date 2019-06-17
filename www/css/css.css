@@ -1,0 +1,323 @@
+.dl-icon{
+	font-family: dl-icon!important;
+	font-size: 1pc;
+	font-style: normal;
+}
+.wrap-content .login-wrap-box{
+	width: 25pc;
+	margin: 50px auto;
+	font-size: 14px;
+	color: #333;
+	box-shadow: 0 0 5px 5px #999;
+}
+.login-wrap-box .title{
+	color: #363940;
+	font-size: 1pc;
+	padding: 14px 1pc;
+	line-height: 1;
+	border-bottom: 1px solid #e8eaec;
+}
+.login-wrap-box .content-box{
+	width: 21pc;
+	margin: 0 auto;
+}
+.login-wrap-box .form-box{
+	text-align: left;
+}
+.login-wrap-box .username-label,.login-wrap-box .password-label{
+	position: relative;
+	display: block;
+	margin-top: 20px;
+}
+.login-wrap-box .label .tip{
+	color: #f55845;
+	padding-right: 2px;
+}
+.login-wrap-box .label .tipinfo{
+	color: #f55845
+}
+.login-wrap-box .username-label .dl-icon{
+	position: absolute;
+	left: 10px;
+	top: 2pc;
+	z-index: 33;
+	font-size: 18px;
+}
+.login-wrap-box .username,.login-wrap-box .password{
+	display: block;
+	width: 280px;
+	margin-top: 5px;
+	padding: 7px 20px 7px 34px;
+	border: 1px solid #dcdee2;
+	border-radius: 4px;
+	line-height: 1.5;
+	font-size: 13px;
+	color: #515a6e;
+	background-color: #fff;
+	background-image: none;
+	position: relative;
+	cursor: text;  
+}
+.login-wrap-box .request-btn{
+	display: block;
+	width: 100%;
+	margin: 20px 0 8px;
+	border-radius: 4px;
+	border: none;
+	text-align: center;
+	line-height: 36px;
+	color: #fff;
+	background: #19be6b;
+}
+.request-btn:disabled{
+	background: #999;
+}
+.login-wrap-box .info{
+	padding-bottom: 30px; 
+}
+.login-wrap-box .btn{
+	color: #2a8bec;
+	cursor: pointer;
+}
+
+.personnal-wrap{
+	width: 80%;
+	margin: 0 auto;
+	box-shadow: 0 0 3px 3px #e8eaec; 
+	overflow: hidden;
+}
+.personnal-wrap .title-h2{
+	padding: 30px 20px;
+	border-bottom: 1px solid #e8eaec;
+}
+.personnal-wrap .personnal-content{
+	padding: 20px 50px;
+}
+.personnal-content .personnal-item{
+	display: block;
+	width: 100px;
+	height: 40px;	
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+}
+.personnal-content .personnal-item:hover{
+	background-color: rgba(134,134,134,0.3); 
+	cursor: pointer;
+}
+.personnal-content .choose{
+	background-color: #fff;
+	border-bottom: none;
+}
+
+.personnal-content .personnal-detail{
+	padding-top: 20px; 
+	background-color: #fff;
+}
+.personnal-content .personnal-detail .avatar{
+	text-align: center;
+	margin-right: 16px;
+	cursor: pointer;
+}
+.personnal-content .personnal-detail .avatar .avatar-img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.personnal-content .personnal-detail .avatar .modify{
+	margin-top: 8px;
+	color: #3399ea; 
+}
+.personnal-content .personnal-detail .avatar .modify:hover{
+	color: #157dcf;
+}
+.personnal-content .personnal-detail .personnal-detail-right{
+	width: 700px;
+}
+.personnal-content .personnal-detail .personnal-detail-right .right-info{
+	overflow: hidden;
+}
+.personnal-detail .personnal-detail-right .right-info .id-card{
+	height: 20px;
+	line-height: 20px;
+	color: #999;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #e8eaec;
+}
+.id-info .nickname-label,.id-info .briefintro-label,.id-info .password-label{
+	position: relative;
+	display: block;
+	margin-top: 20px;
+}
+.id-info .nickname-label .label,.id-info .briefintro-label .label,.id-info .password-label .label{
+	display: block;
+}
+.id-info .nickname-label .nickname,.id-info .briefintro-label .briefintro,.id-info .password-label .password{
+	display: block;
+	width: 280px;
+	margin-top: 5px;
+	padding: 7px 20px 7px 34px;
+	border: 1px solid #dcdee2;
+	border-radius: 4px;
+	line-height: 1.5;
+	font-size: 13px;
+	color: #515a6e;
+	background-color: #fff;
+	background-image: none;
+	position: relative;
+	cursor: text;  
+}
+.id-info .briefintro-label .briefintro{
+	resize: none;
+	padding-left: 20px;
+	width: 500px;
+	height: 80px;
+}
+.id-info .briefintro-label .count-tip{
+	color: #999;
+	font-size: 12px;
+}
+.personnal-detail .password-box{
+	width: 700px;
+	margin: 0 auto;
+}
+.id-info .request-btn{
+	display: block;
+	width: 350px;
+	margin: 20px 0 8px;
+	border-radius: 4px;
+	border: none;
+	text-align: center;
+	line-height: 36px;
+	color: #fff;
+	background: #19be6b;
+}
+.id-info .request-btn:disabled{
+	background: #999;
+}
+
+.modal{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 10000;
+}
+.modal .modal-content{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 700px;
+	transform: translate(-50%,-50%);
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.modal .modal-content .modal-header{
+	width: 100%;
+	border-bottom: 1px solid #e8eaec;
+}
+.modal .modal-content .modal-header .modal-close{
+	position: absolute;
+	right: 16px;
+	top: 16px;
+}
+.modal .modal-content .modal-header .modal-close .close-icon{
+	font-size: normal!important;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	color: #999;
+	text-align: center;
+	line-height: 16px;
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	cursor: pointer;
+}
+.modal .modal-content .modal-header .modal-title{
+	height: 32px;
+	line-height: 32px;
+	margin: 0 20px;
+}
+.modal .modal-content .modal-body{
+	width: 100%;
+	overflow: hidden;
+}
+.modal .modal-content .operate-area{
+	position: relative;
+	width: 80%;
+	margin: 20px auto;
+	background-color: rgba(0,0,0,0.03);
+	border: 1px dashed rgba(0,0,0,0.08);
+	padding: 35px;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+.modal .modal-content .cut-area{
+	padding-top: 10px;
+	padding-left: 10px; 
+}
+.modal .modal-content .operate-area .download-img{
+	display: block;
+	margin: 0 auto 6px;
+	width: 42px;
+	height: 42px;
+	overflow: hidden;
+}
+.modal .modal-content .operate-area .download-tip{
+	display: block;
+	padding: 15px;
+	color: #666;
+	line-height: 30px;
+}
+.modal .modal-content .operate-area input[type=file]{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+.modal .modal-content .img-tip{
+	margin-left: 30px;
+	margin-top: 10px; 
+	font-size: 12px; 
+}
+.modal .modal-content .success-upload{
+	color: #19be6b;
+}
+.modal .modal-content .fail-upload{
+	color: red;
+}
+.modal .modal-content .modal-footer{
+	width: 100%;
+	overflow: hidden;
+}
+.modal .modal-content .modal-footer .btn-box{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+.modal .modal-content .modal-footer .request-btn,.modal .modal-content .modal-footer .cancel-btn{
+	display: block;
+	width: 100px;
+	margin: 20px 0 8px;
+	border-radius: 4px;
+	border: none;
+	text-align: center;
+	line-height: 36px;
+	color: #fff;
+	background: #19be6b;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.modal .modal-content .modal-footer .cancel-btn,.modal .modal-content .modal-footer .request-btn:disabled{
+	background-color: #999;
+}

@@ -1,0 +1,41 @@
+<div>
+	<div class="wrap" >
+		<div class="header-wrap" style="position: relative;z-index: 1">
+			<nav class="container">
+				<div class="navbar-header fl">
+					<a class="navbar-brand" ui-sref="root.home"><img src="/images/logo.png" alt=""></a>
+				</div>
+				<div class="navbar-nav fl">
+					<ul class="nav-list clearfix">
+						<li class="nav-item"><a ui-sref="root.home" ui-sref-active="active">首页</a></li>
+						<li class="nav-item"><a ui-sref="root.home" ui-sref-active="active">学无止境</a></li>
+						<li class="nav-item"><a ui-sref="root.home" ui-sref-active="active">个人日记</a></li>
+						<li class="nav-item"><a ui-sref="root.about" ui-sref-active="active">关于我</a></li>
+						<li class="nav-item"><a ui-sref="root.home" ui-sref-active="active">留言板</a></li>
+					</ul>
+				</div>
+				<div class="login-box fr" ng-if="!rootCtrl.isLogin()">
+					<a ui-sref="root.login" ui-sref-active="active" class="item-text">登录</a>
+					/
+					<a ui-sref="root.regist" ui-sref-active="active" class="item-text">注册</a>
+				</div>
+				<div class="login-box fr" ng-if="rootCtrl.isLogin()" ng-mouseenter="rootCtrl.isShowDialog(true)" ng-mouseleave="rootCtrl.isShowDialog(false)">
+					<a class="item-img">
+						<img src="{{ rootCtrl.getAvatar() }}" alt="" class="avatar-img">
+					</a>
+					<div class="operator" ng-show="rootCtrl.dropdown">
+						<a ui-sref="root.profile" ui-sref-active="active" class="item-operate">个人资料</a>
+						<a ui-sref="root.logout" ui-sref-active="active" class="item-operate">退出登录</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<ui-view></ui-view>
+		
+		<div class="wrap-footer">
+			<span>Design by: 夏磊</span>
+			<span>备案号：湘ICP备14011335号-2</span>
+		</div>
+	</div>
+</div>
